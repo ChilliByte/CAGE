@@ -6,18 +6,18 @@
  */
 
 chrome.app.runtime.onLaunched.addListener(function() {
-  var windowWidth = 200;
-  var windowHeight = 200;
+  var windowWidth = screen.availWidth;
+  var windowHeight = screen.availHeight;
   chrome.app.window.create('index.html', {
     id: "mainWindow",
     outerBounds: { 
       width: windowWidth,
       height: windowHeight,
-      left: screen.availWidth - windowWidth,
-      top: screen.availHeight - windowHeight,
+      left: 0,
+      top: 0,
     },
-    resizable: false,
-    alwaysOnTop: true,
-    frame:"none"
+    resizable: true,
+    alwaysOnTop: false,
+    frame:"chrome"
   });      
 });
