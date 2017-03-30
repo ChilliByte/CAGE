@@ -5,13 +5,61 @@
   </head>
   <body>
     <canvas id="gameCanvas"></canvas>
+    
     <script src="main.js"></script>
+    <script src="modules/hud.js"></script>    
     <script src="game.js"></script>
+    
+    <script src="modules/images.js"></script>    
     <script src="modules/input.js"></script>
     <script src="modules/level.js"></script>
     <script src="modules/box.js"></script>
     <script src="modules/projectile.js"></script>
     <script src="modules/player.js"></script>
-    <script src="levels/demo.js"></script>
+    <script src="modules/platform.js"></script>
+    
+    <script src="modules/mob.js"></script>
+    <script src="modules/ai.js"></script>
+    
+    <script src="modules/movingPlatform.js"></script>
+    <script src="modules/bouncingPlatform.js"></script>
+    <script src="modules/ice.js"></script>
+    
+    <script src="modules/collectible.js"></script>
+    <script src="modules/coin.js"></script>
+    <script src="modules/sizePowerUp.js"></script>
+    
+    <script src="modules/crates.js"></script>
+    
+    <script src="modules/switches.js"></script>
+    <script src="modules/doors.js"></script>
+    
+    <script src="modules/hudElements.js"></script>
+    <script src="modules/sprites.js"></script>
+    
+    <script src="modules/menus.js"></script>
+    
+    <script src="levels/w1l1.js"></script>
+    <script src="levels/w1l2.js"></script>
+    <script src="levels/w1l3.js"></script>
+    <script src="levels/w1boss.js"></script>
+    
+    <div id="menu">
+      <img src="assets/chars.png"/></br>
+      <button>Play as character 1</button>
+      <button>Play as character 2</button>
+    </div>
+    
+    <div id="debug">
+      X: <span id="x"></span><br>
+      Y: <span id="y"></span><br>
+      vX: <span id="vx"></span><br>
+      vY: <span id="vy"></span><br>
+      isJumping: <span id="ij"></span><br>
+      Level Offset: <span id="lo"></span><br>
+      Level X: <span id="lx"></span><br>
+      FPS: <span id="fp"></span><br>
+    </div>
+    <script src="debug.js"></script>
   </body>
 </html>

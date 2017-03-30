@@ -1,7 +1,7 @@
 body {
     height:100%;
     width:100%;
-    background-color:#222;   
+    background-color:#589fd8;   
     padding:0;
     margin:0;
     font-family:Verdana;
@@ -17,4 +17,41 @@ canvas {
     margin:auto;
     z-index:-1;
     border:1px solid black;
+}
+
+#debug {
+  z-index:0;
+  bottom:0;
+  right:0;
+  background-color:rgba(0,0,0,0.5);
+  color:white;
+  position:fixed;
+  display:none /*inline-block*/;
+  width:300px;
+  font-size:1.5em;
+}
+
+#menu {
+  height:100%;
+  width:100%;
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  display:block;
+  background-color:#444;
+  text-align:center;
+}
+
+#menu button {
+  all:initial;
+  height:50px;
+  width:150px;
+  background-color:#337733;
+  color:#ffffff;
+  text-align:center;
+  font-family:Calibri;
+  line-height:50px;
+  margin:50px;
 }

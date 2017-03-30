@@ -4,19 +4,48 @@
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-//First update all of the X and Y positions
-function update() {
-    Alex.checkKeys();
-    Alex.move();
-    levels[currentLevel].boxes.checkCollisions(Alex);
-}
+game = {
+  debug: false,
+  paused: true,
+  pause: function() {
+    game.paused = true;
+  },
+  play: function() {
+    game.paused = false;
+  },
+  kill: function() {
+    render = function() {return null;};
+  }
+};
 
-//Then Draw everything
 function render() {
-  update();
-  //Clear The Last Frame
-  c.clearRect(0, 0, 40*u, 20*u);
-  Box.draw(currentLevel);
-  Alex.draw();
+  currentTime = new Date().getTime();
+  delta = currentTime - oldTime;
+  oldTime = currentTime;
+  //multiplier = delta/16.6;
+  multiplier = 1;
+  
+  if(!game.paused) {
+    //First update all of the X and Y positions
+    levels[currentLevel].update(multiplier);
+    Player.updateAll(multiplier);
+  
+  }
+  
+    //Clear The Last Frame
+    c.clearRect(0, 0, 40*u, 20*u);
+    
+    //Then Draw everything
+    levels[currentLevel].draw();
+    Player.drawAll();
+    HUDElements.drawAll();
+  
+  
+  if(game.debug) {
+    debug();
+  }
+  //Call the next frame
   requestAnimationFrame(render);
 }
+
+console.log("Game.js Loaded");
