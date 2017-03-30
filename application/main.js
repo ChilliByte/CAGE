@@ -1,6 +1,9 @@
 //Key Game Variables - see document for definitions
 var canvas,c,
-u = 100,
+tilesX = 40,
+tilesY = 20,
+pixelsPerTile = 100,
+u = pixelsPerTile,
 currentTime = 0,
 oldTime = 0,
 delta = 0,
@@ -23,8 +26,8 @@ window.onload = function() {
   
   canvas = document.getElementById("gameCanvas");
   c = canvas.getContext("2d");
-  canvas.height = 2000;
-  canvas.width = 4000;
+  canvas.height = tilesY * u;
+  canvas.width = tilesX * u;
   
   c.imageSmoothingEnabled = false;
   
