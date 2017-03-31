@@ -1,0 +1,51 @@
+var w1l1;
+
+w1l1 = new Level(200,level1Bg,level1Fg);
+
+w1l1.statics.push(
+  new Platform(-3, 0, 3, 20, noTile),
+  new Platform(0, 18, 53, 2, noTile),
+  new Platform(35, 17, 18, 1, noTile),
+  new Platform(36, 16, 17, 1, noTile),
+  new Platform(37, 15, 8, 1, noTile),
+  new Platform(38, 14, 7, 1, noTile),
+  new Platform(39, 13, 6, 1, noTile),
+  new Platform(58, 16, 13, 4, noTile),
+  new Platform(60, 13, 11, 3, noTile),
+  new Platform(74, 17, 2, 3, noTile),
+  new Platform(79, 13, 4, 7, noTile),
+  new Platform(91, 13, 4, 7, noTile),
+  new Platform(95, 14, 1, 1, noTile),
+  new Platform(95, 15, 2, 1, noTile),
+  new Platform(95, 16, 3, 1, noTile),
+  new Platform(95, 17, 4, 1, noTile),
+  new Platform(95, 18, 5, 1, noTile),
+  new Platform(95, 19, 27, 1, noTile),
+  new Platform(116, 17, 2, 3, noTile),
+  new Platform(120, 15, 2, 5, noTile),
+  new Platform(124, 13, 2, 7, noTile),
+  new Platform(126, 17, 2, 3, noTile),
+  new Platform(128, 11, 2, 9, noTile),
+  new Platform(130, 15, 2, 5, noTile),
+  new Platform(132, 9, 2, 11, noTile),
+  new Platform(140, 18, 2, 1, noTile),
+  new Platform(148, 15, 12, 5, noTile),
+  new Platform(162, 13, 2, 2, noTile),
+  new Platform(166, 13, 2, 2, noTile),
+  new Platform(170, 18, 30, 2, noTile),
+  new Platform(170, 17, 11, 1, noTile),
+  new Platform(170, 16, 10, 1, noTile),
+  new Platform(170, 15, 9, 1, noTile),
+  new Platform(170, 14, 8, 1, noTile),
+  new Platform(170, 13, 7, 1, noTile),
+  new Platform(170, 12, 6, 1, noTile),
+  new Platform(170, 11, 5, 1, noTile),
+  new Platform(170, 10, 4, 1, noTile),
+  new Platform(192, 11,  2,  2, noTile),
+  new Platform(195,  0,  5, 9, noTile),
+  new Platform(195, 15,  5,  9, noTile),
+  new Platform(196, 9,  4,  1, noTile),
+  new Platform(196, 14,  4,  1, noTile)
+);
+
+console.log("World-1 Level-1 (w1l1.js) Loaded");

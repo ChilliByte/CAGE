@@ -1,0 +1,65 @@
+var w1l2;
+
+w1l2 = new Level(200,level2Bg,level2Fg);
+
+w1l2.statics.push(
+  new Platform(  0, 14,  2,  1, noTile),
+  new Platform(  0, 15,  3,  1, noTile),
+  new Platform(  0, 16,  4,  1, noTile),
+  new Platform(  0, 17,  5,  1, noTile),
+  new Platform(  0, 18, 46,  2, noTile),
+  new Platform( 14, 14,  7,  1, noTile),
+  new Platform( 30, 17, 16,  1, noTile),
+  new Platform( 31, 16, 15,  1, noTile),
+  new Platform( 32, 15, 14,  1, noTile),
+  new Platform( 33, 14, 13,  1, noTile),
+  new Platform( 34, 13, 12,  1, noTile),
+  new Platform( 35, 12, 11,  1, noTile),
+  new Platform( 36, 11, 10,  1, noTile),
+  new Platform( 37, 10,  9,  1, noTile),
+  new Platform( 38,  9,  8,  1, noTile),
+  new Platform( 39,  8,  7,  1, noTile),
+  new Platform( 40,  7,  6,  1, noTile),
+  new Platform( 41,  6,  5,  1, noTile),
+  new Platform( 42,  5,  4,  1, noTile),
+  new Platform( 54, 13, 19,  7, noTile),
+  new Platform( 81, 13,  1,  7, noTile),
+  new Platform( 95, 18, 20,  2, noTile),
+  new Platform(107, 17,  8,  1, noTile),
+  new Platform(108, 16,  7,  1, noTile),
+  new Platform(109, 15,  6,  1, noTile),
+  new Platform(110, 14,  5,  1, noTile),
+  new Platform(111, 13,  4,  1, noTile),
+  new Platform(114, 19, 47,  1, noTile),
+  new Platform(138, 13,  2,  1, noTile),
+  new Platform(138, 14,  3,  1, noTile),
+  new Platform(138, 15,  4,  1, noTile),
+  new Platform(138, 16,  5,  1, noTile),
+  new Platform(138, 17,  6,  1, noTile),
+  new Platform(138, 18, 23,  1, noTile),
+  new Platform(170, 17, 11,  1, noTile),
+  new Platform(170, 18, 30,  2, noTile),
+  new Platform(170, 16, 10,  1, noTile),
+  new Platform(170, 15,  9,  1, noTile),
+  new Platform(170, 14,  8,  1, noTile),
+  new Platform(170, 13,  7,  1, noTile),
+  new Platform(170, 12,  6,  1, noTile),
+  new Platform(170, 11,  5,  1, noTile),
+  new Platform(170, 10,  4,  1, noTile),
+  new Platform(192, 11,  2,  2, noTile),
+  new Platform(195,  0,  5, 9, noTile),
+  new Platform(195, 15,  5,  9, noTile),
+  new Platform(196, 9,  4,  1, noTile),
+  new Platform(196, 14,  4,  1, noTile)
+);
+
+w1l2.dynamics.push(
+  new BouncingPlatform(46,17,8,3, noTile),
+  new BouncingPlatform(76,16,2,1, noTile),
+  new BouncingPlatform(87,19,3,1, noTile),
+  new MovingPlatform(123,13,6,2, dirt, PatrolAI,{x1:115,x2:138,vX:1,dir:1}),
+  new MovingPlatform(150,14,3,1, dirt, PatrolAI,{x1:146,x2:157,vX:1,dir:1}),
+  new MovingPlatform(160,11,3,1, dirt, PatrolAI,{x1:156,x2:167,vX:3,dir:-1}),
+  new MovingPlatform(170,8,3,1, dirt, PatrolAI,{x1:166,x2:177,vX:2,dir:1})
+);
+console.log("World-1 Level-2 (w1l2.js) Loaded");
