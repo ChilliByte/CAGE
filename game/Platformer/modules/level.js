@@ -14,15 +14,18 @@ var Level = class Level {
     this.index = game.levels.length-1;
   }
   
-  add(obj) {
-    if(obj.constructor.type == "static") {
-      this.statics.push(obj);
-    } else if(obj.constructor.type == "dynamic") {
-      this.dynamics.push(obj);
-    } else if(obj.constructor.type == "collectible") {
-      this.collectibles.push(obj);
-    } else {
-      throw "Error adding to scene: Object" + obj + "is not of a valid type";
+  add(...args) {
+    for(var i in args) {
+      var obj = args[i];
+      if(obj.constructor.type == "static") {
+        this.statics.push(obj);
+      } else if(obj.constructor.type == "dynamic") {
+        this.dynamics.push(obj);
+      } else if(obj.constructor.type == "collectible") {
+        this.collectibles.push(obj);
+      } else {
+        throw "Error adding to scene: Object" + obj + " is not of a valid type";
+      }
     }
   }
   
