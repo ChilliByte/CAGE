@@ -1,1 +1,0 @@
-new HUDBar(33,1,6,1,"#FF0000","#FFFFFF",100,() => {return players[0].health;});

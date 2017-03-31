@@ -9,7 +9,6 @@ oldTime = 0,
 delta = 0,
 keys = [],
 modules = [],
-players = [],
 totalModules,
 currentLevel = 0,
 totalLevels,
@@ -35,7 +34,7 @@ window.onload = function() {
   totalLevels = scriptCount("levels");
   
   //If there are level script files loaded, AND if they are added to the levels array correctly, start the game.
-  if((totalLevels > 0) && (levels.length > 0)) {
+  if((totalLevels > 0) && (game.levels.length > 0)) {
     render();
   }
 };

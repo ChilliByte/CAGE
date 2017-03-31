@@ -7,6 +7,9 @@
 game = {
   debug: false,
   paused: true,
+  levels:[],
+  players:[],
+  hud:[],
   pause: function() {
     game.paused = true;
   },
@@ -27,7 +30,7 @@ function render() {
   
   if(!game.paused) {
     //First update all of the X and Y positions
-    levels[currentLevel].update(multiplier);
+    game.levels[currentLevel].update(multiplier);
     Player.updateAll(multiplier);
   
   }
@@ -36,7 +39,7 @@ function render() {
     c.clearRect(0, 0, 40*u, 20*u);
     
     //Then Draw everything
-    levels[currentLevel].draw();
+    game.levels[currentLevel].draw();
     Player.drawAll();
     HUDElements.drawAll();
   

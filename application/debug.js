@@ -8,12 +8,12 @@ var xSpan = document.getElementById("x"),
     fpSpan = document.getElementById("fp");
     
 function debug() {
-  xSpan.innerText = players[0].x;
-  ySpan.innerText = players[0].y;
-  vxSpan.innerText = players[0].vX;
-  vySpan.innerText = players[0].vY;
-  ijSpan.innerText = players[0].isJumping;
-  loSpan.innerText = levels[currentLevel].offset;
-  lxSpan.innerText = levels[currentLevel].offset + players[0].x;
+  xSpan.innerText = game.players[0].x;
+  ySpan.innerText = game.players[0].y;
+  vxSpan.innerText = game.players[0].vX;
+  vySpan.innerText = game.players[0].vY;
+  ijSpan.innerText = game.players[0].isJumping;
+  loSpan.innerText = game.levels[currentLevel].offset;
+  lxSpan.innerText = game.levels[currentLevel].offset + players[0].x;
   fpSpan.innerText = Math.round(1000/delta);
 }
