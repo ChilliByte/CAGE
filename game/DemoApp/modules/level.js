@@ -32,6 +32,7 @@ var Level = class Level {
   
   //Loop through every item in the scene and see if obj has collided with it,
   //Returns an array of all the collision directions relative to obj.
+  //Updates any dynamic objects of collision, if one is detected
   colCheck(obj) {
     var dir = [];
     var temp = "";
