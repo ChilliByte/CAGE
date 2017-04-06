@@ -1,16 +1,28 @@
 modules.push("input");
 
 window.addEventListener("load",function() {
-  canvas.addEventListener("mousedown", getPosition, false);
-
-  function getPosition(event) {
-    evX = event.x;
-    evY = event.y;
-    evX -= canvas.offsetLeft;
-    evY -= canvas.offsetTop;
-    return [evX,evY];
-  }
+  canvas.addEventListener("mousedown", CanvasClickHandler, false);
+  canvas.style.zIndex = 1;
 });
+
+function CanvasClickHandler(e) {
+  
+}
+
+function getPosition(event) {
+  evX = event.x;
+  evY = event.y;
+  evX -= canvas.offsetLeft;
+  evY -= canvas.offsetTop;
+  return {
+    canvasX: evX,
+    canvasY: evY,
+    screenX: event.x,
+    screenY: event.y,
+    gameX: tilesX * u * evX/window.innerWidth,
+    gameY: tilesY * u * evY/window.innerHeight
+  };
+}
 
 document.body.addEventListener("keydown", function(e) {
   if ((!keys[27]) && (e.keyCode == 27)) {

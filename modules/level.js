@@ -24,7 +24,7 @@ var Level = class Level {
       } else if(obj.constructor.type == "collectible") {
         this.collectibles.push(obj);
       } else {
-        throw "Error adding to scene: Object" + obj + " is not of a valid type";
+        console.error("Error adding to scene: object",obj,"is not of a valid type");
       }
     }
   }

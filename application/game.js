@@ -32,7 +32,6 @@ function render() {
     //First update all of the X and Y positions
     game.levels[currentLevel].update(multiplier);
     Player.updateAll(multiplier);
-  
   }
   
     //Clear The Last Frame

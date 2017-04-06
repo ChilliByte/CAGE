@@ -1,3 +1,4 @@
+//Get the HTML elements to output debug data to
 var xSpan = document.getElementById("x"),
     ySpan = document.getElementById("y"),
     vxSpan = document.getElementById("vx"),
@@ -7,6 +8,7 @@ var xSpan = document.getElementById("x"),
     lxSpan = document.getElementById("lx"),
     fpSpan = document.getElementById("fp");
     
+//Output debug data every frame
 function debug() {
   xSpan.innerText = game.players[0].x;
   ySpan.innerText = game.players[0].y;
